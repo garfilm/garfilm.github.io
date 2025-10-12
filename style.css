@@ -59,7 +59,7 @@ body {
 /* === General Layout === */
 main, section {
   padding: 5rem 1rem;
-  margin: 0 20%; /* added horizontal margins */
+  margin: 0 80%; /* added horizontal margins */
   text-align: center;
 }
 
