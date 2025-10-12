@@ -7,7 +7,6 @@
 
 body {
   font-family: 'Epilogue', sans-serif;
-  font-weight: 400;
   color: #333;
   background-color: #fafafa;
   scroll-behavior: smooth;
@@ -18,67 +17,49 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.9); /* semi-transparent black */
+  background: rgba(0, 0, 0, 0.9); /* 90% black */
   backdrop-filter: blur(4px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 1.5rem;
+  padding: 1rem 2rem;
   z-index: 1000;
 }
 
 .logo {
-  font-family: 'Rubik', sans-serif;
-  font-size: 1.6rem;
-  color: #fff;
+  font-weight: 800;
+  font-size: 1.4rem;
   letter-spacing: 2px;
-  text-transform: uppercase;
+  color: #fff;
 }
 
-/* === Navigation Links === */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.2rem;
+  gap: 1.5rem;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #fff;
-  font-family: 'Epilogue', sans-serif; /* updated font for readability */
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 0.95rem;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
   color: #007bff;
 }
 
-/* === General Layout === */
-main, section {
-  padding: 5rem 1rem;
-  margin: 0 8%; /* balanced margins */
-  text-align: center;
-  opacity: 0; /* for fade-in animation */
-  transform: translateY(30px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+/* === Sections === */
 section {
-  margin-top: 5rem;
+  padding: 6rem 10% 4rem;
+  text-align: center;
 }
 
 h2 {
-  font-family: 'Anton', sans-serif;
+  font-weight: 600;
   text-transform: uppercase;
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -94,7 +75,7 @@ h2 {
 
 .gallery-grid img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 8px;
   transition: transform 0.3s ease;
 }
 
@@ -108,7 +89,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  max-width: 600px;
+  max-width: 700px;
   margin: auto;
 }
 
@@ -120,8 +101,9 @@ h2 {
 }
 
 .about-content p {
-  font-size: 1rem;
+  font-weight: 400;
   line-height: 1.6;
+  font-size: 1rem;
 }
 
 /* === Contact === */
@@ -138,8 +120,8 @@ h2 {
   padding: 0.75rem;
   border-radius: 8px;
   border: 1px solid #ccc;
-  font-size: 1rem;
   font-family: 'Epilogue', sans-serif;
+  font-size: 1rem;
 }
 
 .btn {
@@ -149,14 +131,19 @@ h2 {
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  font-size: 1rem;
-  font-family: 'Anton', sans-serif;
+  font-weight: 600;
   text-transform: uppercase;
-  transition: background 0.3s;
+  transition: background 0.3s ease;
 }
 
 .btn:hover {
   background: #007bff;
+}
+
+.confirmation {
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #0047ab;
 }
 
 .hidden {
@@ -170,23 +157,15 @@ footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
-  font-family: 'Epilogue', sans-serif;
-  margin-top: 2rem;
+  font-weight: 400;
 }
 
 /* === Responsive === */
-@media (max-width: 992px) {
-  main, section {
-    margin: 0 5%;
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 1rem;
   }
-}
-
-@media (max-width: 600px) {
-  main, section {
-    margin: 0 3%;
-  }
-
-  .about-content {
-    flex-direction: column;
+  section {
+    padding: 5rem 5% 3rem;
   }
 }

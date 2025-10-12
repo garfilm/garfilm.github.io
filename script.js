@@ -1,21 +1,24 @@
-// Handle Contact Form Submission
-document.getElementById("contactForm").addEventListener("submit", function (e) {
+// === Store contact form data in localStorage ===
+document.getElementById("contactForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
   const message = document.getElementById("message").value.trim();
 
-  const newMessage = { name, email, message, date: new Date().toLocaleString() };
+  // Create an object for the message
+  const formData = { name, email, message, date: new Date().toISOString() };
 
-  // Store in localStorage
-  let messages = JSON.parse(localStorage.getItem("contactMessages")) || [];
-  messages.push(newMessage);
-  localStorage.setItem("contactMessages", JSON.stringify(messages));
+  // Retrieve existing messages or initialize empty array
+  const storedMessages = JSON.parse(localStorage.getItem("contactMessages")) || [];
 
-  // Feedback to user
-  document.getElementById("successMessage").classList.remove("hidden");
+  // Add new message
+  storedMessages.push(formData);
 
-  // Reset form
+  // Save back to localStorage
+  localStorage.setItem("contactMessages", JSON.stringify(storedMessages));
+
+  // Show confirmation and reset form
+  document.querySelector(".confirmation").classList.remove("hidden");
   this.reset();
 });
