@@ -19,7 +19,7 @@ body {
   top: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.9); /* semi-transparent black */
-  backdrop-filter: blur(4px); /* subtle blur for modern look */
+  backdrop-filter: blur(4px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: space-between;
@@ -46,10 +46,11 @@ body {
 .nav-links a {
   text-decoration: none;
   color: #fff;
-  font-family: 'Anton', sans-serif;
-  font-weight: 400;
+  font-family: 'Epilogue', sans-serif; /* updated font for readability */
+  font-weight: 500;
   text-transform: uppercase;
-  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-size: 0.95rem;
   transition: color 0.3s;
 }
 
@@ -60,8 +61,16 @@ body {
 /* === General Layout === */
 main, section {
   padding: 5rem 1rem;
-  margin: 0 8%; /* reduced margins */
+  margin: 0 8%; /* balanced margins */
   text-align: center;
+  opacity: 0; /* for fade-in animation */
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 section {
