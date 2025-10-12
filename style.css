@@ -1,15 +1,15 @@
-/* === Base styles === */
+/* === Reset === */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
+body {
   font-family: 'Barlow', sans-serif;
-  scroll-behavior: smooth;
-  background-color: #fafafa;
   color: #333;
+  background-color: #fafafa;
+  scroll-behavior: smooth;
 }
 
 /* === Navbar === */
@@ -18,18 +18,18 @@ html, body {
   top: 0;
   width: 100%;
   background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 0.8rem 1.5rem;
   z-index: 1000;
 }
 
 .logo {
   font-family: 'Archivo Black', sans-serif;
-  font-size: 1.5rem;
   color: #0047ab;
+  font-size: 1.5rem;
 }
 
 .nav-links {
@@ -41,68 +41,30 @@ html, body {
 .nav-links a {
   text-decoration: none;
   color: #0047ab;
-  font-weight: 500;
-  transition: color 0.3s;
   font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  transition: color 0.3s;
 }
 
 .nav-links a:hover {
   color: #007bff;
 }
 
-/* === Hero Section === */
-.hero {
-  height: 100vh;
-  background: url('https://source.unsplash.com/random/1600x900?camera,photography') center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* === Section Defaults === */
+section {
+  padding: 5rem 1rem;
   text-align: center;
-  padding: 2rem;
-  color: #fff;
+  margin-top: 3rem;
 }
 
-.hero-content {
-  background: rgba(0,0,0,0.5);
-  padding: 2rem;
-  border-radius: 10px;
-}
-
-.hero h1 {
+h2 {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  margin-bottom: 1.5rem;
-}
-
-.btn {
-  background: #0047ab;
-  color: #fff;
-  padding: 0.7rem 1.4rem;
-  border-radius: 25px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background: #007bff;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #0047ab;
 }
 
 /* === Gallery === */
-.gallery {
-  padding: 5rem 1rem 2rem;
-  text-align: center;
-}
-
-.gallery h2 {
-  font-family: 'Barlow Condensed', sans-serif;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-}
-
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -120,16 +82,6 @@ html, body {
 }
 
 /* === About === */
-.about {
-  padding: 4rem 1rem;
-  text-align: center;
-}
-
-.about h2 {
-  font-family: 'Barlow Condensed', sans-serif;
-  margin-bottom: 2rem;
-}
-
 .about-content {
   display: flex;
   flex-direction: column;
@@ -140,24 +92,13 @@ html, body {
 }
 
 .about-content img {
+  border-radius: 50%;
   width: 150px;
   height: 150px;
-  border-radius: 50%;
   object-fit: cover;
 }
 
 /* === Contact === */
-.contact {
-  padding: 4rem 1rem;
-  text-align: center;
-  background: #f5faff;
-}
-
-.contact h2 {
-  font-family: 'Barlow Condensed', sans-serif;
-  margin-bottom: 1.5rem;
-}
-
 .contact form {
   display: flex;
   flex-direction: column;
@@ -174,6 +115,21 @@ html, body {
   font-size: 1rem;
 }
 
+.btn {
+  background: #0047ab;
+  color: #fff;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #007bff;
+}
+
 .hidden {
   display: none;
 }
@@ -183,7 +139,7 @@ footer {
   background: #0047ab;
   color: #fff;
   text-align: center;
-  padding: 1.5rem;
+  padding: 1rem;
   font-size: 0.9rem;
   margin-top: 2rem;
 }
@@ -193,5 +149,8 @@ footer {
   .about-content {
     flex-direction: row;
     justify-content: center;
+  }
+  .about-content p {
+    max-width: 400px;
   }
 }

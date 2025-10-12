@@ -6,7 +6,7 @@
   <title>My Photography & Video Portfolio</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow&family=Barlow+Condensed:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@600&family=Archivo+Black&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -15,7 +15,6 @@
     <div class="logo">MyPortfolio</div>
     <nav>
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -24,43 +23,41 @@
   </header>
 
   <main>
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <h1>Capturing Life Through My Lens</h1>
-        <p>Photography & Videography by [Your Name]</p>
-        <a href="#gallery" class="btn">View My Work</a>
-      </div>
-    </section>
-
+    <!-- Gallery Section -->
     <section id="gallery" class="gallery">
       <h2>Gallery</h2>
       <div class="gallery-grid">
-        <img src="https://source.unsplash.com/random/400x400?landscape" alt="Photo 1">
-        <img src="https://source.unsplash.com/random/400x400?portrait" alt="Photo 2">
-        <img src="https://source.unsplash.com/random/400x400?city" alt="Photo 3">
-        <img src="https://source.unsplash.com/random/400x400?film" alt="Photo 4">
+        <img src="https://source.unsplash.com/random/400x400?landscape" alt="Landscape">
+        <img src="https://source.unsplash.com/random/400x400?portrait" alt="Portrait">
+        <img src="https://source.unsplash.com/random/400x400?city" alt="City">
+        <img src="https://source.unsplash.com/random/400x400?nature" alt="Nature">
+        <img src="https://source.unsplash.com/random/400x400?film" alt="Film">
+        <img src="https://source.unsplash.com/random/400x400?ocean" alt="Ocean">
       </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="about">
       <h2>About Me</h2>
       <div class="about-content">
         <img src="https://source.unsplash.com/random/200x200?person" alt="Your portrait">
         <p>
-          Hi, I'm [Your Name], a passionate photographer and videographer who loves turning real-life moments into visual stories.
+          Hi, I’m <strong>[Your Name]</strong>, a passionate photographer and videographer.
+          I capture life’s best moments and turn them into lasting visuals.
         </p>
       </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="contact">
       <h2>Contact Me</h2>
       <form id="contactForm">
         <input type="text" id="name" placeholder="Your Name" required>
         <input type="email" id="email" placeholder="Your Email" required>
-        <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+        <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
         <button type="submit" class="btn">Send Message</button>
       </form>
-      <p id="successMessage" class="hidden">✅ Your message has been saved. Thank you!</p>
+      <p id="successMessage" class="hidden">✅ Message saved! Thank you for reaching out.</p>
     </section>
   </main>
 
