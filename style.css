@@ -18,8 +18,8 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: #000; /* changed to black */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,7 +30,7 @@ body {
 .logo {
   font-family: 'Rubik', sans-serif;
   font-size: 1.6rem;
-  color: #0047ab;
+  color: #fff; /* white text for contrast on black */
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -44,7 +44,7 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #0047ab;
+  color: #fff; /* white links */
   font-family: 'Anton', sans-serif;
   font-weight: 400;
   text-transform: uppercase;
@@ -53,14 +53,18 @@ body {
 }
 
 .nav-links a:hover {
-  color: #007bff;
+  color: #007bff; /* blue hover effect */
 }
 
-/* === Section Defaults === */
-section {
+/* === General Layout === */
+main, section {
   padding: 5rem 1rem;
+  margin: 0 20%; /* added horizontal margins */
   text-align: center;
-  margin-top: 3rem;
+}
+
+section {
+  margin-top: 5rem;
 }
 
 h2 {
@@ -156,17 +160,23 @@ footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
-  margin-top: 2rem;
   font-family: 'Epilogue', sans-serif;
+  margin-top: 2rem;
 }
 
 /* === Responsive === */
-@media (min-width: 768px) {
-  .about-content {
-    flex-direction: row;
-    justify-content: center;
+@media (max-width: 992px) {
+  main, section {
+    margin: 0 10%; /* narrower margins on tablets */
   }
-  .about-content p {
-    max-width: 400px;
+}
+
+@media (max-width: 600px) {
+  main, section {
+    margin: 0 5%; /* narrower margins on phones */
+  }
+
+  .about-content {
+    flex-direction: column;
   }
 }
