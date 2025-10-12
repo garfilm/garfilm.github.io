@@ -6,7 +6,8 @@
 }
 
 body {
-  font-family: 'Barlow', sans-serif;
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 400;
   color: #333;
   background-color: #fafafa;
   scroll-behavior: smooth;
@@ -27,11 +28,14 @@ body {
 }
 
 .logo {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.6rem;
   color: #0047ab;
-  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
+/* === Navigation Links === */
 .nav-links {
   list-style: none;
   display: flex;
@@ -41,8 +45,10 @@ body {
 .nav-links a {
   text-decoration: none;
   color: #0047ab;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 600;
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 0.9rem;
   transition: color 0.3s;
 }
 
@@ -58,7 +64,8 @@ section {
 }
 
 h2 {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
   font-size: 2rem;
   margin-bottom: 2rem;
   color: #0047ab;
@@ -98,6 +105,11 @@ h2 {
   object-fit: cover;
 }
 
+.about-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
 /* === Contact === */
 .contact form {
   display: flex;
@@ -113,6 +125,7 @@ h2 {
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 1rem;
+  font-family: 'Epilogue', sans-serif;
 }
 
 .btn {
@@ -123,6 +136,8 @@ h2 {
   border-radius: 25px;
   cursor: pointer;
   font-size: 1rem;
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
   transition: background 0.3s;
 }
 
@@ -142,6 +157,7 @@ footer {
   padding: 1rem;
   font-size: 0.9rem;
   margin-top: 2rem;
+  font-family: 'Epilogue', sans-serif;
 }
 
 /* === Responsive === */
