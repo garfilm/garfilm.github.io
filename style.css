@@ -18,7 +18,8 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #000; /* changed to black */
+  background: rgba(0, 0, 0, 0.9); /* semi-transparent black */
+  backdrop-filter: blur(4px); /* subtle blur for modern look */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: space-between;
@@ -30,7 +31,7 @@ body {
 .logo {
   font-family: 'Rubik', sans-serif;
   font-size: 1.6rem;
-  color: #fff; /* white text for contrast on black */
+  color: #fff;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -44,7 +45,7 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #fff; /* white links */
+  color: #fff;
   font-family: 'Anton', sans-serif;
   font-weight: 400;
   text-transform: uppercase;
@@ -53,13 +54,13 @@ body {
 }
 
 .nav-links a:hover {
-  color: #007bff; /* blue hover effect */
+  color: #007bff;
 }
 
 /* === General Layout === */
 main, section {
   padding: 5rem 1rem;
-  margin: 0 80%; /* added horizontal margins */
+  margin: 0 8%; /* reduced margins */
   text-align: center;
 }
 
@@ -85,7 +86,7 @@ h2 {
 .gallery-grid img {
   width: 100%;
   border-radius: 10px;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .gallery-grid img:hover {
@@ -167,13 +168,13 @@ footer {
 /* === Responsive === */
 @media (max-width: 992px) {
   main, section {
-    margin: 0 10%; /* narrower margins on tablets */
+    margin: 0 5%;
   }
 }
 
 @media (max-width: 600px) {
   main, section {
-    margin: 0 5%; /* narrower margins on phones */
+    margin: 0 3%;
   }
 
   .about-content {
