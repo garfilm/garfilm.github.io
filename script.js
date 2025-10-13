@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 // === Store contact form data in localStorage ===
 document.getElementById("contactForm").addEventListener("submit", function(e) {
   e.preventDefault();
@@ -21,4 +22,11 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
   // Show confirmation and reset form
   document.querySelector(".confirmation").classList.remove("hidden");
   this.reset();
+=======
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+>>>>>>> Stashed changes
 });

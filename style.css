@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 /* === Reset === */
 * {
   margin: 0;
@@ -32,10 +33,41 @@ body {
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 0.6rem;
+=======
+/* Font + General */
+body {
+  font-family: 'Epilogue', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+  color: #111;
+}
+
+a {
+  text-decoration: none;
+  color: #0077B6;
+}
+
+/* Header + Nav */
+header {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.navbar {
+  position: relative;
+>>>>>>> Stashed changes
 }
 
 .nav-links {
   list-style: none;
+<<<<<<< Updated upstream
   display: flex;
   justify-content: center;
   gap: 1.5rem;
@@ -173,3 +205,182 @@ footer {
     padding: 6rem 5% 3rem;
   }
 }
+=======
+  padding: 0;
+  margin: 1rem 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-weight: 500;
+}
+
+.nav-links a.active {
+  text-decoration: underline;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #111;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* Projects Grid */
+.projects .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.thumb {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.thumb svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.thumb .overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  color: white;
+  font-weight: 500;
+  font-size: 1.2rem;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease;
+}
+
+.thumb:hover svg {
+  opacity: 0.8;
+}
+
+.thumb:hover .overlay {
+  opacity: 1;
+}
+
+/* About + Contact Pages */
+main {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+h2 {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-weight: 300;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+input, textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+button {
+  background: #0077B6;
+  color: white;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    display: none;
+    background: white;
+    border: 1px solid #ddd;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    z-index: 10;
+    padding: 1rem 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects .grid {
+    grid-template-columns: 1fr;
+  }
+  /* Project Detail Page */
+.project-detail {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.project-info h2 {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.project-info p {
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.project-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-gallery svg {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+}
+>>>>>>> Stashed changes
